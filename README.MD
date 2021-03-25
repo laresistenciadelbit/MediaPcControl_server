@@ -15,7 +15,7 @@ It main purpose is to control media controls in the computer from the smartphone
 Also in the main interface we can control some other keys like enter,space and also get and put the clipboard from/to the computer.
 
 
-![alt mpc_server](https://raw.githubusercontent.com/laresistenciadelbit/MediaPcControl_server/main/readme_images/4.png)
+![alt mpc_server](https://raw.githubusercontent.com/laresistenciadelbit/MediaPcControl_server/main/readme_images/4_lite.png)
 
 This is the server interface
 
