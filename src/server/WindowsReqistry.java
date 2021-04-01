@@ -3,14 +3,11 @@ package server;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-
 /**
  * @author Oleg Ryaboy, based on work by Miguel Enriquez 
  */
 public class WindowsReqistry {
-
     /**
-     * 
      * @param location path in the registry
      * @param key registry key
      * @return registry value or null if not found
@@ -32,7 +29,6 @@ public class WindowsReqistry {
             if( ! output.contains(key)){
                     return null;
             }
-
             // Parse out the value
             String[] parsed = output.split("\t");
             return parsed[parsed.length-1];

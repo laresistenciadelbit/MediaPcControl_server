@@ -6,7 +6,7 @@
  -> Clase de lectura/escritura del registro de windows que se usará para configurar el autoarranque (el mensaje es del propio autor, no encontré la fuente oficial) https://stackoverflow.com/questions/62289/read-write-to-windows-registry-using-java/1982033#1982033
  -> Conversión de teclas a códigos de teclas para la clase Robot (https://stackoverflow.com/questions/1248510/convert-string-to-keyevents)
  -> Controlmedia.dll para enviar teclas multimedia ya que java no permite mapear este tipo de teclas. Basado en este programa: https://batchloaf.wordpress.com/2012/04/17/simulating-a-keystroke-in-win32-c-or-c-using-sendinput/
-    \_ en realidad estoy simulando una dll como ejecutable, la forma correcta de hacerlo sería esta: https://stackoverflow.com/questions/30221022/how-to-emulate-pressing-media-keys-in-java/55321025#55321025 , https://github.com/nsnave/java-media-keys
+    \_ en realidad estoy simulando un ejecutable como dll, la forma correcta de hacerlo sería esta: https://stackoverflow.com/questions/30221022/how-to-emulate-pressing-media-keys-in-java/55321025#55321025 , https://github.com/nsnave/java-media-keys
 */
 package server;
 
@@ -181,6 +181,13 @@ public class SSLSocketMain
                 robot.keyPress(KeyEvent.VK_NUMPAD5);robot.keyRelease(KeyEvent.VK_NUMPAD5);
             robot.keyRelease(KeyEvent.VK_ALT);
         break;
+
+        case '®':   //simulamos la tacla de borrar como el símbolo ® cuando lo recibimos
+            doType(KeyEvent.VK_BACK_SPACE); 
+            if(debug)
+                System.out.println(" SIMULADO BACKSPACE ");
+        break;
+        
         default:
             if(debug)
                 System.out.println("Cannot type character " + character);
